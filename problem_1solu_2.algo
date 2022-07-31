@@ -1,0 +1,22 @@
+ALGORITHM hashtable_solution
+VAR
+    tab_1=[3,1,7,9] : ARRAY_OF number[4];
+    tab_2=[2,4,1,9,3] : ARRAY_OF number[5];
+    htab : HASH_TABLE<INTEGER,STRING>;
+     i=0 INTEGER ;
+    j=0 INTEGER ;
+BEGIN
+    htab : HASH_TABLE<INTEGER,STRING>;
+    WHILE (i<4 && j<5) DO
+
+     htab.insert(tab_1[i],"a");
+     
+     IF (tab_1[i]==tab_2[j]) THEN
+        htab.insert(tab_2[j],"b");
+     ELSE_IF (tab_1[i]<>tab_2[j]) THEN
+        htab.insert(tab_2[j],"a");
+     END_IF
+
+    END_WHILE
+    
+END
