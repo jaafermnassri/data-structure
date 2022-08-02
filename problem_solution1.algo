@@ -1,0 +1,38 @@
+ALGORITHM singles_sum
+VAR
+    sum=0 INTEGER ;
+    tab_1=[3,1,7,9] : ARRAY_OF number[4];
+    tab_2=[2,4,1,9,3] : ARRAY_OF number[5];
+    i INTEGER ;
+    j INTEGER ;
+BEGIN
+    // WHILE (i<4 && j<5) DO
+    //     IF (tab_1[i]==tab_2[j]) THEN
+    //         i++
+    //     ELSE_IF (tab_1[i]<>tab_2[j]) THEN
+    //         sum=sum+tab_1[i];
+    //         i++    
+    //     END_IF
+    // END_WHILE
+
+    FOR i FROM 0 TO tab_1.length STEP 1  DO
+    let j=0
+    WHILE (tab_1[i]<>tab_2[j] || j<tab_2.length) DO
+    j++
+    IF (j==tab_2.length) THEN
+        sum=sum+tab_1[i]
+    END_IF
+    END_WHILE
+    END_FOR
+
+    FOR i FROM 0 TO tab_2.length STEP 1  DO
+    let j=0
+    WHILE (tab_1[j]<>tab_2[i] || j<tab_1.length) DO
+    j++
+    IF (j==tab_1.length) THEN
+        sum=sum+tab_2[i]
+    END_IF
+    END_WHILE
+    END_FOR
+    write (sum);
+END
