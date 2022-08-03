@@ -1,0 +1,23 @@
+ALGORITHM singles_sum_hashtable_solution
+VAR
+    sum=0 INTEGER ;
+    tab_1=[3,1,7,9] : ARRAY_OF number[4];
+    tab_2=[2,4,1,9,3] : ARRAY_OF number[5];
+    i INTEGER ;
+    j INTEGER ;
+FOR i FROM 0 TO set1.length STEP 1  DO
+    if (hashtab.lookup(set1[i]))
+    count = htab.get(set1[i])
+    htab.insert(set1[i],count=1)
+else 
+htab.insert(set1[i],1)
+
+END_FOR
+FOR j FROM 0 TO set2.length STEP 1  DO
+    if (hashtab.lookup(set2[j]))
+    count = htab.get(set2[j])
+    htab.insert(set2[j],count=1)
+else 
+htab.insert(set2[j],2)
+
+END_FOR
